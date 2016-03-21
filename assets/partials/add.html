@@ -1,25 +1,28 @@
 <div class="page-header">
 	<h1>Add Contact</h1>
 </div>
-<form class="form-horizontal">
+
+<div id="alertContainer"></div>
+
+<form class="form-horizontal" ng-submit="submit()">
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label for="name" class="col-sm-4 control-label">Name</label>
 				<div class="col-sm-8">
-				<input type="text" id="name" class="form-control">
+				<input type="text" id="name" class="form-control" ng-model="contact.name">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="phone" class="col-sm-4 control-label">Phone number</label>
 				<div class="col-sm-8">
-				<input type="tel" id="tel" class="form-control">
+				<input type="tel" id="tel" class="form-control" ng-model="contact.phone">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="address" class="col-sm-4 control-label">Address</label>
 				<div class="col-sm-8">
-				<textarea class="form-control"></textarea>
+				<textarea class="form-control" ng-model="contact.address"></textarea>
 				</div>
 			</div>			
 		</div>
@@ -27,21 +30,19 @@
 			<div class="form-group">
 				<label for="email" class="col-sm-4 control-label">Email Address</label>
 				<div class="col-sm-8">
-				<input type="email" id="email" class="form-control">
+				<input type="email" id="email" class="form-control" ng-model="contact.email">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="website" class="col-sm-4 control-label">Website</label>
 				<div class="col-sm-8">
-				<input type="text" id="tel" class="form-control">
+				<input type="text" id="tel" class="form-control" ng-model="contact.website">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="notes" class="col-sm-4 control-label">Notes</label>
 				<div class="col-sm-8">
-					<textarea id="notes" class="form-control"></textarea>
-					<span class="help-block">Any additional information about the
-					contact.</span>
+					<textarea id="notes" class="form-control" ng-model="contact.notes" bs-tooltip data-title="Any additional information about the contact." data-trigger="focus" data-placement="bottom"></textarea>
 				</div>
 			</div>			
 		</div>

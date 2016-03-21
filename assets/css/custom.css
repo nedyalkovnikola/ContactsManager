@@ -1,6 +1,43 @@
+body {
+	font-family: 'Open Sans', 'Arial', sans-serif;
+}
 
+.navbar-default {
+	background-color: #fcde37;
+}
 
 .navbar-brand {
 	min-width: 240px;
 }
+
+.navbar-default .navbar-brand {
+	color: #555;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #555;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+	background-color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	background-color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .active > a {
+	background-color: #ffffff;
+	color: #555;
+}
+
+.navbar-default .navbar-nav > .active > a:focus {
+	background-color: #ffffff;
+} 
+
+.navbar-default .navbar-nav > .active > a:hover {
+	background-color: #ffffff;
+} 
+
+
 
