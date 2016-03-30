@@ -31,19 +31,51 @@ app.config(function($routeProvider){
 app.factory('contacts', function () {
 	var contacts = [
 		{
-			name: 'Stephen Radford',
-			phone: '0123456789',
-			address: '123, Some Street\nLeicester\nLE1 2AB',
-			email: 'stephen@email.com',
-			website: 'stephenradford.me',
+			name: 'Anders Holdvad',
+			phone: '21223132',
+			address: 'Randersvej 91\nHobro \n9500',
+			email: 'anders@email.com',
+			website: 'andersholdvad.me',
 			notes: ''
 		},
 		{
-			name: 'Declan Proud',
+			name: 'Jeppe Højbjerg',
 			phone: '91234859',
-			address: '234, Some Street\nLeicester\nLE1 2AB',
-			email: 'declan@declan.com',
-			website: 'declanproud.me',
+			address: 'Gl. Vardevej 14\nEsbjerg \n6700',
+			email: 'jeppe@email.com',
+			website: 'jeppehojbjerg.me',
+			notes: 'Some notes about the contact.'
+		},
+		{
+			name: 'Patrick Banggaard',
+			phone: '33444199',
+			address: 'Kaj Zartows Vej 3\nHerning \n7400',
+			email: 'patrick@email.com',
+			website: 'patrickbanggaard.me',
+			notes: 'Some notes about the contact.'
+		},
+		{
+			name: 'Søren Reese',
+			phone: '29934771',
+			address: 'Tingvej 15\nViborg \n8800',
+			email: 'soren@email.com',
+			website: 'sorenreese.me',
+			notes: 'Some notes about the contact.'
+		},
+		{
+			name: 'Lasse Petry',
+			phone: '13441780',
+			address: 'Bygmarken 10\nFarum \n3520',
+			email: 'lasse@email.com',
+			website: 'lassepetry.me',
+			notes: 'Some notes about the contact.'
+		},
+		{
+			name: 'Casper Olesen',
+			phone: '91880063',
+			address: 'Norgesvej 17\nHaderslev \n6100',
+			email: 'casper@email.com',
+			website: 'casperolesen.me',
 			notes: 'Some notes about the contact.'
 		}
 
@@ -82,7 +114,7 @@ app.directive('editable', function(){
 			value: '=editable',
 			field: '@fieldType'
 		},
-		controller: function($scope) {
+		controller: function($scope, $alert) {
 			$scope.field = ($scope.field) ? $scope.field : 'text';
 
 			$scope.editor = {
@@ -99,6 +131,7 @@ app.directive('editable', function(){
 				$scope.value = $scope.editor.value;
 				$scope.toggleEditor();
 			};
-		}
+
+		}	
 	};
 })

@@ -2,7 +2,6 @@
 	<span ng-bind-html="value | paragraph"></span> 
 	<button class="btn btn-default btn-xs" ng-click="toggleEditor()">Edit</button>
 </div>
-
 <div ng-show="editor.showing">
 	<div ng-if="field == 'textarea'">
 		<textarea ng-model="editor.value" class="form-control"></textarea>
@@ -11,6 +10,6 @@
 		<input type="{{field}}" ng-model="editor.value" class="form-control">
 	</div>
 	<hr>
-	<button class="btn btn-success btn-xs" ngclick="save()">Save</button>
-	<button class="btn btn-default btn-xs" ngclick="toggleEditor()">Cancel</button>
+	<button class="btn btn-success btn-xs" ng-click="save()">Save</button>
+	<button class="btn btn-default btn-xs" ng-click="toggleEditor()">Cancel</button>
 </div>
